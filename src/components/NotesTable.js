@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-native";
+import { useSelector, useDispatch } from "react-redux";
 import { GetNotes } from "../services/notes";
 
 export const NotesTable = () => {
@@ -12,7 +12,13 @@ export const NotesTable = () => {
 
   return (
     <table className="table table-dark">
-      <tbody>{}</tbody>
+      <tbody>
+        {notes.map((n) => (
+          <tr>
+            <td style={{ textAlign: "left" }}>{n.value}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 };
