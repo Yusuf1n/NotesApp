@@ -9,7 +9,7 @@ export const NewNoteModal = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div>
+    <div style={{ paddingBottom: "10px" }}>
       <Button onClick={handleShow} className="btn btn-success">
         New Note
       </Button>
@@ -54,7 +54,7 @@ const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Modal heading</Modal.Title>
+        <Modal.Title>Create a new note</Modal.Title>
       </Modal.Header>
       <Form
         onSubmit={(event) => {
