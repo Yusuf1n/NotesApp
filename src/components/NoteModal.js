@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Form, Button, Modal, InputGroup, FormControl } from "react-bootstrap";
+import { Form, Modal, Button, InputGroup, FormControl } from "react-bootstrap";
 import { NewNote, EditNote } from "../services/notes";
 
 export const NewNoteModal = () => {
@@ -45,7 +45,7 @@ export const EditNoteModal = ({ note }) => {
 
 const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
   const [modalNote, setModalNote] = useState({});
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setModalNote(note);
